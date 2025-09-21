@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useGetMovieByIdQuery } from '../services/movies'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
@@ -35,7 +35,9 @@ const MovieDetails = () => {
                         <span>{data?.releaseDate}</span>
                     </div>
                     <div>
-                        <button className='bg-red-500 text-white px-6 py-2 rounded-lg mt-3 hover:bg-red-600 transition-colors'>Book Tickets</button>
+                        <Link to={`/booking/${id}`}>
+                            <button className='bg-red-500 text-white px-6 py-2 rounded-lg mt-3 hover:bg-red-600 transition-colors'>Book Tickets</button>
+                        </Link>
                     </div>
                 </div>
                 

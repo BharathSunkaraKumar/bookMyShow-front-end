@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar"
 import MovieDetails from "./pages/MovieDetails"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
+import Booking from "./pages/Booking"
+import Hall from "./pages/Hall"
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/:id" element={<MovieDetails/>}/>
+        <Route path="/booking/:id" element={<Booking/>}/>
+        <Route path="/hall/:movieId/:theaterId/:showId" element={<Hall/>}/>
       </Routes>
       </div>
     </Router>
